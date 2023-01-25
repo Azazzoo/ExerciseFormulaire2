@@ -1,0 +1,51 @@
+.bloc {
+    display: block;
+}
+html {
+    font-size: 16px;
+}
+main {
+    border: 1px solid black;
+    width: 600px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-family: "Agency FB";
+}
+.boite {
+    border: 1px solid black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: 1rem;
+}
+h1 {
+    padding-left: 1rem;
+}
+h2 {
+    padding-left: 2rem;
+}
+.bouton {
+    text-align: center;
+    padding: 25px 0;
+}
+label {
+    padding: 0.5rem 0;
+}
+.nom1{
+    margin-left: 30px;
+}
+
+.name1{
+    margin-left: 5px;
+}
+.valide:focus:invalid{
+    background-image:url("wrong-icon.png") ;
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: top right ;
+}
+.valide:focus:valid{
+    background-image:url("tick.png") ;
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: top right ;
+}

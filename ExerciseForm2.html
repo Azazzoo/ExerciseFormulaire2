@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise Formulaire 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form method="post" action="mailto:m.o.auger.moa@gmail.com">
+    <main>
+        <h1>Formulaire de paiment</h1>
+        <h2>Informations de contact</h2>
+        <div class="boite">
+            <label class="bloc nom">Nom: <input  class="nom1 valide " type="text" required placeholder="Nom"></label>
+            <label class="bloc courriel">Courriel: <input class="name1 valide" name="courriel" type="email" placeholder="Janne Doe" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ></label>
+            <label class="bloc">Téléphone: <input name="telephone" type="tel" placeholder="(555) 555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
+            <label class="bloc">Compagnie: <input name="Compagnie" type="text" required></label>
+            <label class="bloc province">Province : <select class="select1" name="province">
+                <option value="Quebec">Quebec
+                <option value="Ontario">Ontario
+                <option value="Manitoba">Manitoba
+            </select></label>
+        </div>
+        <h2>Informations sur la commande</h2>
+        <div class="boite">
+            <label class="bloc">Pommes: <input type="text" name="pommes" ></label>
+        </div>
+        <h2>Informations de livraison</h2>
+        <div class="boite">
+            <label class="bloc"><input type="checkbox" name="typepaiment" value="V"> Siganture requise</label>
+            <label class="bloc"><input type="checkbox" name="typepaiment" value="A"> Livrer a la meme adressse que l'adresse de paiement</label>
+        </div>
+        <div class="bouton">
+            <input type="submit" value="Envoyer" onclick="return valider()">
+            <input type="reset" value="Annuler">
+        </div>
+    </main>
+</form>
+</body>
+</html>
