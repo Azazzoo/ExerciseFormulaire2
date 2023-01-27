@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Exercise Formulaire 2</title>
     <link rel="stylesheet" href="style.css">
+    <script src="JS.js"></script>
 </head>
 <body>
 <form method="post" action="mailto:m.o.auger.moa@gmail.com">
@@ -11,23 +12,50 @@
         <h1>Formulaire de paiment</h1>
         <h2>Informations de contact</h2>
         <div class="boite">
-            <label class="bloc nom">Nom: <input  class="nom1 valide " type="text" required placeholder="Nom"></label>
-            <label class="bloc courriel">Courriel: <input class="name1 valide" name="courriel" type="email" placeholder="Janne Doe" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ></label>
-            <label class="bloc">Téléphone: <input name="telephone" type="tel" placeholder="(555) 555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
-            <label class="bloc">Compagnie: <input name="Compagnie" type="text" required></label>
-            <label class="bloc province">Province : <select class="select1" name="province">
-                <option value="Quebec">Quebec
-                <option value="Ontario">Ontario
+            <label class="bloc nom">Nom: <input  class="nom1 valide" type="text" required maxlength="100" minlength="2" placeholder="Obligatoire" ></label>
+            <label class="bloc courriel">Courriel: <input class="input" disabled class="name1 valide" name="courriel" type="email" placeholder="customer@compagnies.com" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ></label>
+            <label class="bloc">Téléphone: <input id="tel" class="input valide" name="telephone" type="tel" placeholder="(555) 555-5555 (Obligtoire)" required pattern="[(][0-9][0-9][0-9][)]\s[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]" > </label>
+            <label class="bloc">Compagnie: <input list="lCompagnie" type="text" >
+                <datalist id="lCompagnie">
+                    <option value="Mcdonalds" ></option>
+                    <option value="rona"></option>
+                    <option value="wendys"></option>
+                </datalist>
+
+            </label>
+            <label class="bloc province">Province : <select onchange="chek(value)" class="select1" name="province" id="province">
+                <option onchange="" value="Premier">
+                <option value="quebec">Québec
+                <option value="ontario">Ontario
                 <option value="Manitoba">Manitoba
             </select></label>
         </div>
         <h2>Informations sur la commande</h2>
         <div class="boite">
-            <label class="bloc">Pommes: <input type="text" name="pommes" ></label>
+            <label class="bloc">Pommes: <input id="nbpomme" type="number" class="input" name="pommes" min="0" max="40"></label>
+
+                <label >Patate: <input id="nbpatate" type="range" name="patate" min="0" max="40" list="markers" step="5" value="0" onchange="updateTextInput(this.value)"></label>
+                <label>
+                    <datalist id="markers">
+                        <option class="data" value="0" label="0"></option>
+                        <option class="data" value="5" label=""></option>
+                        <option class="data" value="10" label=""></option>
+                        <option class="data" value="15" label=""></option>
+                        <option class="data" value="20" label=""></option>
+                        <option class="data" value="25" label=""></option>
+                        <option class="data" value="30" label=""></option>
+                        <option class="data" value="35" label=""></option>
+                        <option class="data" value="40"label="40"></option>
+                    </datalist>
+                </label>
+            <div class="flex">
+                <p class="text">Le nombre de patate est :   </p>
+                <p id="textInput" value="0">0</p>
+            </div>
         </div>
-        <h2>Informations de livraison</h2>
+        <h2>Vos Commentaires</h2>
         <div class="boite">
-            <label class="bloc"><input type="checkbox" name="typepaiment" value="V"> Siganture requise</label>
+            <label class="bloc">Pseudonime (3-9 Caractères): <input class="valide" name="pseudonyme" maxlength="8" minlength="3" required > </label>
             <label class="bloc"><input type="checkbox" name="typepaiment" value="A"> Livrer a la meme adressse que l'adresse de paiement</label>
         </div>
         <div class="bouton">
