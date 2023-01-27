@@ -41,13 +41,13 @@ label {
     margin-left: 5px;
 
 }
-.valide:invalid{
+.valide:focus:invalid{
     background-image:url("wrong-icon.png") ;
     background-size: 10%;
     background-repeat: no-repeat;
     background-position: top right ;
 }
-.valide:valid{
+.valide:focus:valid{
     background-image:url("tick.png") ;
     background-size: 10%;
     background-repeat: no-repeat;
@@ -76,3 +76,12 @@ datalist {
 .text{
     padding-right: 1rem;
 }
+#pseudo{
+    font-family: "Baskerville Old Face";
+    font-size: .70rem;
+    margin-top: -.40rem;
+    max-width: 9rem;
+    margin-left: 13rem;
+    text-align: center;
+}
+
