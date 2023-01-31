@@ -15,11 +15,10 @@
             <label class="bloc nom">Nom: <input id="nom" class="nom1 valide" type="text" required maxlength="100" minlength="2" placeholder="Obligatoire" ></label>
             <label class="bloc courriel">Courriel: <input class="input" disabled class="name1 valide" name="courriel" type="email" placeholder="customer@compagnies.com" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ></label>
             <label class="bloc">Téléphone: <input id="tel" class="input valide" name="telephone" type="tel" placeholder="(555) 555-5555 (Obligtoire)" required pattern="[(][0-9][0-9][0-9][)]\s[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]|[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]|[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" > </label>
-            <label class="bloc">Compagnie: <input list="lCompagnie" type="text" >
+            <label class="bloc">Compagnie: <input type="" list="lCompagnie">
                 <datalist id="lCompagnie">
-                    <option value="Mcdonalds" ></option>
-                    <option value="rona"></option>
-                    <option value="wendys"></option>
+                    <option value="Mcdonalds"><legend>Restaurant</legend></option>
+                    <option value="rona"><legend>magasin</legend></option>
                 </datalist>
 
             </label>

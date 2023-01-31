@@ -69,7 +69,7 @@ function chekpatate(){
     }
 }
 function erase(){
-    document.getElementById("textInput").innerText = "0";
+    document.getElementById("textInput").innerText = "5";
 }
 
 function Valider(){
