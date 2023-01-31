@@ -72,3 +72,53 @@ function erase(){
     document.getElementById("textInput").innerText = "0";
 }
 
+function Valider(){
+    let tel = document.getElementById("tel").value;
+    let nbpatate = document.getElementById("nbpatate").value;
+    let nbpomme = document.getElementById("nbpomme").value;
+
+    if (nbpatate > nbpomme){
+        if (tel.length === 14){
+            let prov = document.getElementById("province").value;
+            let tel = document.getElementById("tel").value;
+            let codeRegion = tel.substring(1,4);
+            if (prov === 'quebec' && codeRegion === '819'){
+                return true
+            }
+            else if (prov === 'ontario' && codeRegion === '613'){
+                return true
+            }
+            else if (prov === 'manitoba')
+            {
+                return true
+            }
+            else {
+                alert("L'indicatif régional de votre numéro de téléphone ne correspond pas à votre province")
+                return false
+            }
+        }
+        else {
+            let prov = document.getElementById("province").value;
+            let tel = document.getElementById("tel").value;
+            let codeRegion = tel.substring(0,3);
+            if (prov === 'quebec' && codeRegion === '819'){
+                return true
+            }
+            else if (prov === 'ontario' && codeRegion === '613'){
+                return true
+            }
+            else if (prov === 'manitoba')
+            {
+                return true
+            }
+            else {
+                alert("L'indicatif régional de votre numéro de téléphone ne correspond pas à votre province")
+                return false
+            }
+        }
+    }
+    else{
+        alert("Vous devez avoir plus de patate que de pomme")
+    }
+}
+
